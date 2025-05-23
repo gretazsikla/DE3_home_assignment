@@ -1,3 +1,7 @@
+packages <- c("httr", "jsonlite", "dplyr", "lubridate", "Microsoft365R")
+new_packages <- packages[!(packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages)
+
 library(httr)
 library(jsonlite)
 library(dplyr)
